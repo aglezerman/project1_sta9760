@@ -2,7 +2,7 @@
 # analyzing millions of NYC parking violations
 
 ## inputs:
---APP_KEY = unique app key from data.cityofnewyork.us
+--APP_KEY = unique app key from data.cityofnewyork.us, make an account to get your own unique key
 
 --page_size = how many results per pull, or 'page'. this is required
 
