@@ -1,7 +1,9 @@
 FROM python:3.7
 
-WORKDIR /APP
+WORKDIR /app
 
-COPY requirements.txt /APP
+COPY requirements.txt /app
 
 RUN pip install -r requirements.txt
+
+COPY . .
