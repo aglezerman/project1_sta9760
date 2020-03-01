@@ -1,5 +1,5 @@
 ### project1_sta9760 , part 1, Andre G
-## analyzing millions of NYC parking violations
+# analyzing millions of NYC parking violations
 
 ## inputs:
 --APP_KEY = unique app key from data.cityofnewyork.us
