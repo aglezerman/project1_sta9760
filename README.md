@@ -15,12 +15,13 @@ docker build -t project1:1.3 .
 
 ## to print to stdout
 command: 
-,,,
-docker run -e APP_KEY='YOUR KEY HERE' -t project1:1.3 python -m main --num_pages=INT_VALUE --page_size=INT_VALUE
-,,,
+
+    docker run -e APP_KEY='YOUR KEY HERE' -t project1:1.3 python -m main --num_pages=INT_VALUE --page_size=INT_VALUE
+
 
 ## print to file
-command: docker run -e APP_KEY='YOUR KEY HERE' -t project1:1.3 python -m main --num_pages=INT_VALUE --page_size=INT_VALUE --output='filename.ext'
+command: 
+    docker run -e APP_KEY='YOUR KEY HERE' -t project1:1.3 python -m main --num_pages=INT_VALUE --page_size=INT_VALUE --output='filename.ext'
 
 
 ## print example with 5 pages and 1 result per page
