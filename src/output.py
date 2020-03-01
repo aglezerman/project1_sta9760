@@ -11,7 +11,7 @@ def show_data(client,page_size: int, num_pages: int, output: str):
     numPages = int(num_pages)
     pageSize = int(page_size)
     if numPages == -1: # -1 is the default
-        dataset_size = int(client.get(DATABASE_ID, select ='COUNT(*)'[0]['COUNT']))
+        dataset_size = int(client.get(DATABASE_ID, select ='COUNT(*)')[0]['COUNT'])
         numPages = int(dataset_size/pageSize)
     ## if output was not set, print to stdout
     if output == -1:
