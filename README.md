@@ -5,7 +5,9 @@
 --APP_KEY = unique app key from data.cityofnewyork.us
 
 --page_size = how many results per pull, or 'page'. this is required
+
 --num_pages = how many pulls to preform. if not provided, program will keep asking for pages until data is depleted
+
 --output = string value for file to output to. if not provided, output to stdout
 
 ## to print to stdout
