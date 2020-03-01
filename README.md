@@ -14,7 +14,8 @@
 docker build -t project1:1.3 .
 
 ## to print to stdout
-command: ,,,
+command: 
+,,,
 docker run -e APP_KEY='YOUR KEY HERE' -t project1:1.3 python -m main --num_pages=INT_VALUE --page_size=INT_VALUE
 ,,,
 
