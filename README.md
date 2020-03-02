@@ -11,7 +11,7 @@
 --output = string value for file to output to. if not provided, output to stdout
 
 ## to build the docker
-docker build -t project1:1.3 .
+    docker build -t project1:1.3 .
 
 ## to print to stdout
 command: 
