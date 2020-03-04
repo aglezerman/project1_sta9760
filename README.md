@@ -1,6 +1,8 @@
 ### project1_sta9760 , part 1, Andre G
 # analyzing millions of NYC parking violations
 
+# known issue: this program does not seem to be able to print to a file in pcs running a WINDOWS OS as of yet.
+
 ## inputs:
 --APP_KEY = unique app key from data.cityofnewyork.us, make an account to get your own unique key
 
