@@ -14,8 +14,6 @@
 
 --output = string value for file to output to. if not provided, output to stdout
 
-## For machines not running native unix - add 'winpty' before the docker command
-
 ## to build the docker
     docker build -t project1:1.3 .
 
