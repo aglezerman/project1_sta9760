@@ -23,7 +23,7 @@ def show_data(client,page_size: int, num_pages: int, output: str):
     if output == -1:
         for i in range(numPages):
             data = client.get(DATABASE_ID, limit = pageSize, offset = i*numPages)
-            print(f'\n\n\n\n\nPage number:{i+1}\n\n\n\n{data}\n\n\n')
+            print(f'\nPage number:{i+1}\n\n\n\n{data}\n\n\n')
     # otherwise, print to file
     else: 
         for i in range(numPages):
