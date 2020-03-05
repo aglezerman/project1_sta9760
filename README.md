@@ -1,6 +1,9 @@
 ### project1_sta9760 , part 1, Andre G
 # analyzing millions of NYC parking violations
 
+## overview:
+this is part 1 of a python project to analyze millions of NYC parking violations using big data technology tools. As of now, the program is a command line interface that communicates with the API of cityofnewyork to collect data from parking violations. It then displays the data on screen ,or writes it to a file if requested. In the future, this program will also connect to elastisearch to generate visuals and enable searching. 
+
 ## inputs:
 --APP_KEY = unique app key from data.cityofnewyork.us, make an account to get your own unique key
 
@@ -9,8 +12,6 @@
 --num_pages = how many pulls to preform. if not provided, program will keep asking for pages until data is depleted
 
 --output = string value for file to output to. if not provided, output to stdout
-
-## For machines not running native unix - add 'winpty' before the docker command
 
 ## to build the docker
     docker build -t project1:1.3 .
