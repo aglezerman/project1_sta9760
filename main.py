@@ -18,6 +18,7 @@ variables.add_argument('--output', type = str, default = -1)
 
 args = variables.parse_args()
 
+# app key environment variable 
 app_token = os.environ['APP_KEY']
 
 page_size = args.page_size
