@@ -1,6 +1,9 @@
 ### project1_sta9760 , part 1, Andre G
 # analyzing millions of NYC parking violations
 
+## overview:
+this is part 1 of a python project to analyze millions of NYC parking violations using big data technology tools. As of now, the program is a command line interface that communicates with the API of cityofnewyork to collect data from parking violations. It then displays the data on screen ,or writes it to a file if requested. In the future, this program will also connect to elastisearch to generate visuals and enable searching. 
+
 ## inputs:
 --APP_KEY = unique app key from data.cityofnewyork.us, make an account to get your own unique key
 
