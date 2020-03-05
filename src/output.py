@@ -4,6 +4,7 @@ DATABASE_ID = 'nc67-uf89'
 
 # when called, this function will print the data to a file
 def print_to_file(data,output:str):
+    print(f'Printing to file {output}')
     with open(output, 'a') as f:
         print(data, file=f)
         
@@ -14,6 +15,7 @@ def show_data(client,page_size: int, num_pages: int, output: str):
         pageSize = int(page_size)
     except:
         print("Input error. enter num pages and page size as integers (whole number)")
+    print('fetching......')
     if numPages == -1: # -1 is the default. if no input was given, set num pages to ALL pages 
         dataset_size = int(client.get(DATABASE_ID, select ='COUNT(*)')[0]['COUNT'])
         numPages = int(dataset_size/pageSize)
