@@ -11,19 +11,33 @@ this is part 1 of a python project to analyze millions of NYC parking violations
 
 --num_pages = how many pulls to preform. if not provided, program will keep asking for pages until data is depleted
 
---output = string value for file to output to. if not provided, output to stdout
+--output = string value for file to output to. type es for elasticsearch. if not provided, output to stdout
 
-## to build the docker
+## to start
+    docker-compose up -d
+this will start elasticsearch and kibana
+
+## test that elasticsearch and kibana are running:
+elasticsearch: http://localhost:9200 Kibana: http://localhost:5601
+
+## to run and send to elasticsearch: 
+    docker-compose run -e APP_KEY='YOUR KEY HERE' -v $(pwd):/app pyth python -m main --num_pages=INT_VALUE --page_size=INT_VALUE --output=es
+    
+## turn off
+    docker-compose down
+
+
+## project part 1 : this uses docker instead of docker-compose, and does not write to elasticsearch
+
+### to build the docker
     docker build -t project1:1.3 .
-
-## to print to stdout
-command: 
+    
+### to print to stdout
 
     docker run -e APP_KEY='YOUR KEY HERE' -v $(pwd)/app -t project1:1.3 python -m main --num_pages=INT_VALUE --page_size=INT_VALUE
 
 
-## print to file
-command: 
+### print to file 
 
     docker run -e APP_KEY='YOUR KEY HERE' -v $(pwd)/app -t project1:1.3 python -m main --num_pages=INT_VALUE --page_size=INT_VALUE --output='filename.ext'
 
