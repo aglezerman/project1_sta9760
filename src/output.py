@@ -35,9 +35,15 @@ def show_data(client,page_size: int, num_pages: int, output: str):
         for i in range(numPages):
             data = client.get(DATABASE_ID, limit = pageSize, offset = i*numPages)
             # convert issue_date field into a datetime format
-            data[0]['issue_date'] = datetime.strptime(
-                data[0]['issue_date'],'%m/%d/%Y')
-            data_list.append(data)
+            for j in range(pageSize):
+                print(data[j]['issue_date'])
+                data[j]['issue_date'] = datetime.strptime(data[j]['issue_date'],'%m/%d/%Y')
+                for k in data[j]:
+                    try:
+                        data[j][k] = int(data[j][k])
+                    except:
+                        pass
+                data_list.append(data[j])
         return data_list
     else: 
         for i in range(numPages):
