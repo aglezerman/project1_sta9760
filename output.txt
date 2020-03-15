@@ -1,0 +1,78 @@
+[
+  {
+    "health" : "green",
+    "status" : "open",
+    "index" : ".kibana",
+    "uuid" : "a9UPtq0UQWi22oVo_SEHkg",
+    "pri" : "1",
+    "rep" : "0",
+    "docs.count" : "5",
+    "docs.deleted" : "0",
+    "store.size" : "30.3kb",
+    "pri.store.size" : "30.3kb"
+  },
+  {
+    "health" : "yellow",
+    "status" : "open",
+    "index" : "parking-violation-index",
+    "uuid" : "MRRUdSy-TSqtljAFTODGSw",
+    "pri" : "5",
+    "rep" : "1",
+    "docs.count" : "303",
+    "docs.deleted" : "0",
+    "store.size" : "574.4kb",
+    "pri.store.size" : "574.4kb"
+  }
+]
+[
+  {
+    "health" : "green",
+    "status" : "open",
+    "index" : ".kibana",
+    "uuid" : "a9UPtq0UQWi22oVo_SEHkg",
+    "pri" : "1",
+    "rep" : "0",
+    "docs.count" : "5",
+    "docs.deleted" : "0",
+    "store.size" : "30.3kb",
+    "pri.store.size" : "30.3kb"
+  },
+  {
+    "health" : "yellow",
+    "status" : "open",
+    "index" : "parking-violation-index",
+    "uuid" : "MRRUdSy-TSqtljAFTODGSw",
+    "pri" : "5",
+    "rep" : "1",
+    "docs.count" : "323",
+    "docs.deleted" : "0",
+    "store.size" : "725kb",
+    "pri.store.size" : "725kb"
+  }
+]
+[
+  {
+    "health" : "green",
+    "status" : "open",
+    "index" : ".kibana",
+    "uuid" : "a9UPtq0UQWi22oVo_SEHkg",
+    "pri" : "1",
+    "rep" : "0",
+    "docs.count" : "5",
+    "docs.deleted" : "0",
+    "store.size" : "30.3kb",
+    "pri.store.size" : "30.3kb"
+  },
+  {
+    "health" : "yellow",
+    "status" : "open",
+    "index" : "parking-violation-index",
+    "uuid" : "MRRUdSy-TSqtljAFTODGSw",
+    "pri" : "5",
+    "rep" : "1",
+    "docs.count" : "411",
+    "docs.deleted" : "1",
+    "store.size" : "999.4kb",
+    "pri.store.size" : "999.4kb"
+  }
+]
