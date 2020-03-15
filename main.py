@@ -6,6 +6,8 @@ import os
 ## import functions from src subfolder
 from src.api import get_data
 from src.output import show_data
+#
+from src.esearch import create_and_update_index, push
 
 # create variables to be passed in command line
 variables = argparse.ArgumentParser()
@@ -26,4 +28,9 @@ num_pages = args.num_pages
 output = args.output
 
 client = get_data(app_token)
-show_data(client, page_size, num_pages, output)
+if output == 'es':
+	data_list = show_data(client, page_size, num_pages, output)
+	es = create_and_update_index('parking-violation-index')
+	push(data_list,es)
+else:
+	show_data(client, page_size, num_pages, output)
