@@ -7,7 +7,10 @@ def print_to_file(data,output:str):
     print(f'Printing to file {output}')
     with open(output, 'a') as f:
         print(data, file=f)
-        
+
+### make a function to get the data
+#def get_data:
+
 def show_data(client,page_size: int, num_pages: int, output: str):
     ## if NUM_PAGES was not provided, set it to display all of the data
     try:
@@ -23,8 +26,15 @@ def show_data(client,page_size: int, num_pages: int, output: str):
     if output == -1:
         for i in range(numPages):
             data = client.get(DATABASE_ID, limit = pageSize, offset = i*numPages)
-            print(f'\nPage number:{i+1}\n\n\n\n{data}\n\n\n')
+            print(f'\nPage number:{i+1}\n\n\n\n{data}\n\n\nType: {type(data)}')
     # otherwise, print to file
+    elif output == 'es':
+        data_list = []
+        # preps data to load to elasticsearch
+        for i in range(numPages):
+            data = client.get(DATABASE_ID, limit = pageSize, offset = i*numPages)
+            data_list.append(data)
+        return data_list
     else: 
         for i in range(numPages):
             data = client.get(DATABASE_ID, limit = pageSize, offset = i*numPages)
