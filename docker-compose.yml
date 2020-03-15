@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: "3.4"
 services:
   pyth:
@@ -42,4 +43,50 @@ services:
     healthcheck:
       test: ["CMD", "curl", "-s", "-f", "http://localhost:5601/login"]
       retries: 6
+=======
+version: "3.4"
+services:
+  pyth:
+    network_mode: host
+    container_name: pyth
+    build:
+      context: .
+    depends_on: ['kibana']
+    volumes:
+      - ./:/app/:rw
+  elasticsearch:
+    container_name: elasticsearch
+    hostname: elasticsearch
+    image: "docker.elastic.co/elasticsearch/elasticsearch:6.3.2"
+    environment:
+      - http.host=0.0.0.0
+      - transport.host=127.0.0.1
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    #Port 9200 is available on the host
+    expose: ['9200']
+    ports: ['9200:9200']
+    #Healthcheck to confirm availability of ES. Other containers wait on this.
+    healthcheck:
+      test: ["CMD", "curl","-s" ,"-f", "http://localhost:9200/_cat/health"]
+    #Internal network for the containers
+    networks: ['host']
+  kibana:
+    container_name: kibana
+    hostname: kibana
+    image: "docker.elastic.co/kibana/kibana:6.3.2"
+    #Port 5601 accessible on the host
+    expose: ['5601']
+    ports: ['5601:5601']
+    networks: ['host']
+    #We don't start Kibana until the ES instance is ready
+    depends_on: ['elasticsearch']
+    healthcheck:
+      test: ["CMD", "curl", "-s", "-f", "http://localhost:5601/login"]
+      retries: 6
+>>>>>>> 837c8c58d5001a6837ccdbeca4ba3bcee341fc7b
 networks: {host: {}}
