@@ -1,4 +1,5 @@
 from sodapy import Socrata
+from datetime import datetime
 
 DATABASE_ID = 'nc67-uf89'
 
@@ -33,6 +34,9 @@ def show_data(client,page_size: int, num_pages: int, output: str):
         # preps data to load to elasticsearch
         for i in range(numPages):
             data = client.get(DATABASE_ID, limit = pageSize, offset = i*numPages)
+            # convert issue_date field into a datetime format
+            data[0]['issue_date'] = datetime.strptime(
+                data[0]['issue_date'],'%m/%d/%Y')
             data_list.append(data)
         return data_list
     else: 
