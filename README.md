@@ -17,15 +17,20 @@ this is part 1 of a python project to analyze millions of NYC parking violations
     docker-compose up -d
 this will start elasticsearch and kibana
 
-## test that elasticsearch and kibana are running:
+## test that elasticsearch and kibana are running (this might take a couple of minutes):
 elasticsearch: http://localhost:9200 Kibana: http://localhost:5601
 
 ## to run and send to elasticsearch: 
     docker-compose run -e APP_KEY='YOUR KEY HERE' -v $(pwd):/app pyth python -m main --num_pages=INT_VALUE --page_size=INT_VALUE --output=es
-    
+        
 ## turn off
     docker-compose down
 
+## Kibana:
+after you load parking violations into kibana, load the kibana page through the link above. You will be prompted to select the index to work with. select the one that appears: parking-violation-index, and select issue_date as the time field. 
+Now, you can create visualizations and even your own live dashboard, that will update every time you load more violations. 
+
+![Screenshot](kibana.png)
 
 ## project part 1 : this uses docker instead of docker-compose, and does not write to elasticsearch
 
