@@ -19,8 +19,8 @@ Important! To run this, you will need the Docker Desktop software
     docker-compose up -d
 this will start elasticsearch and kibana
 
-## test that elasticsearch and kibana are running (this might take a couple of minutes):
-elasticsearch: http://localhost:9200 Kibana: http://localhost:5601
+## test that elasticsearch and kibana are running 
+(this might take a couple of minutes): elasticsearch: http://localhost:9200 Kibana: http://localhost:5601
 
 ## to run and send to elasticsearch: 
     docker-compose run -e APP_KEY='YOUR KEY HERE' -v $(pwd):/app pyth python -m main --num_pages=INT_VALUE --page_size=INT_VALUE --output=es
