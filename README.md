@@ -1,4 +1,4 @@
-### project1_sta9760 , part 1, Andre G
+### project1_sta9760 , part 2+3, Andre G
 # analyzing millions of NYC parking violations
 
 ## overview:
