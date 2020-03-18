@@ -30,7 +30,7 @@ output = args.output
 client = get_data(app_token)
 if output == 'es':
 	data_list = show_data(client, page_size, num_pages, output)
-	es = create_and_update_index('parking-violation-index')
+	es = create_and_update_index('parking-violation-index','parking-violation')
 	push(data_list,es)
 else:
 	show_data(client, page_size, num_pages, output)
