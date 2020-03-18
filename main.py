@@ -5,7 +5,7 @@ import argparse
 import os
 ## import functions from src subfolder
 from src.api import get_data
-from src.output import show_data
+from src.output import data_handler
 #
 from src.esearch import create_and_update_index, push
 
@@ -27,10 +27,9 @@ page_size = args.page_size
 num_pages = args.num_pages
 output = args.output
 
-client = get_data(app_token)
-if output == 'es':
-	data_list = show_data(client, page_size, num_pages, output)
-	es = create_and_update_index('parking-violation-index','parking-violation')
-	push(data_list,es)
-else:
-	show_data(client, page_size, num_pages, output)
+
+if __name__ == '__main__':
+	client = get_data(app_token)
+	data_handler(client, page_size, num_pages, output)
+
+
