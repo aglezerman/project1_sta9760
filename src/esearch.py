@@ -13,25 +13,6 @@ def create_and_update_index(index_name, doc_type):
             print(f'Error creating index {e}')
             pass
     return es
-'''
-        es.indices.put_mapping(
-            index=index_name,
-            doc_type=doc_type,
-            body={
-                doc_type: {
-                    "properties": {
-                        "issue_date": {
-                        "type": "date","format": "MM-dd-yyyy"},
-                        "fine_amount":{"type":"integer"},
-                        "penalty_amount":{"type": "integer"},
-                        "interest_amount":{"type": "integer"},
-                        "reduction_amount":{"type":"integer"},
-                        "payment_amount":{"type":"integer"},
-                        "amount_due":{"type":"integer"}}
-                }
-            }
-        )
-'''
 
 
 def push(data_list,es):
