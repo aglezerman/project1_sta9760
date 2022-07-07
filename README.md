@@ -2,7 +2,7 @@
 # analyzing millions of NYC parking violations
 
 ## overview:
-this is python project to analyze millions of NYC parking violations using big data technology tools. The program is a command line interface that communicates with the API of cityofnewyork to collect data from parking violations. It then loads the data to Elasticsearch and Kibana, to create visualizations and dashboards. It can also display the data on screen ,or writes it to a file if requested.
+this is a python project to analyze millions of NYC parking violations using big data technology tools. The program is a command line interface that communicates with the API of cityofnewyork to collect data from parking violations. It then loads the data to Elasticsearch and Kibana, to create visualizations and dashboards. It can also display the data on screen ,or writes it to a file if requested.
 
 Important! To run this, you will need the Docker Desktop software
 
